@@ -13,7 +13,7 @@ namespace Xipho_HAL_LU_LVL_JSON_Generator {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MainWindow());
         }
     }
 }
