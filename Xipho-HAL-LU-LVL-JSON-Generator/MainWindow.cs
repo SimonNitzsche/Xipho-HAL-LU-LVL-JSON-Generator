@@ -22,5 +22,9 @@ namespace Xipho_HAL_LU_LVL_JSON_Generator {
             }
             MessageBox.Show(this, sContributorList, "Contributors", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
+
+        private void ToolStrip_OpenLUZ_Click(object sender, EventArgs e) {
+            LUZOpenFileDialog.ShowDialog();
+        }
     }
 }

@@ -31,6 +31,8 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.StatusText = new System.Windows.Forms.ToolStripStatusLabel();
             this.treeView = new System.Windows.Forms.TreeView();
+            this.ToolStrip_OpenLUZ = new System.Windows.Forms.ToolStripMenuItem();
+            this.LUZOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.toolStrip1.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +52,8 @@
             // DropDown_Open
             // 
             this.DropDown_Open.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.DropDown_Open.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStrip_OpenLUZ});
             this.DropDown_Open.Image = ((System.Drawing.Image)(resources.GetObject("DropDown_Open.Image")));
             this.DropDown_Open.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.DropDown_Open.Name = "DropDown_Open";
@@ -100,6 +104,18 @@
             this.treeView.Size = new System.Drawing.Size(782, 354);
             this.treeView.TabIndex = 2;
             // 
+            // ToolStrip_OpenLUZ
+            // 
+            this.ToolStrip_OpenLUZ.Name = "ToolStrip_OpenLUZ";
+            this.ToolStrip_OpenLUZ.Size = new System.Drawing.Size(152, 22);
+            this.ToolStrip_OpenLUZ.Text = "Open LUZ";
+            this.ToolStrip_OpenLUZ.Click += new System.EventHandler(this.ToolStrip_OpenLUZ_Click);
+            // 
+            // LUZOpenFileDialog
+            // 
+            this.LUZOpenFileDialog.Filter = "LU World|*.luz";
+            this.LUZOpenFileDialog.Title = "Select .luz File";
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -128,6 +144,8 @@
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel StatusText;
         private System.Windows.Forms.TreeView treeView;
+        private System.Windows.Forms.ToolStripMenuItem ToolStrip_OpenLUZ;
+        private System.Windows.Forms.OpenFileDialog LUZOpenFileDialog;
     }
 }
 
