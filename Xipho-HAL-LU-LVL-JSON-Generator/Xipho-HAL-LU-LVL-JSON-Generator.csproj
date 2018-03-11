@@ -50,6 +50,9 @@
   <ItemGroup>
     <Compile Include="CommonDatatypes.cs" />
     <Compile Include="GithubAPI.cs" />
+    <Compile Include="LUZPath.cs" />
+    <Compile Include="LUZScene.cs" />
+    <Compile Include="LUZTransition.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>

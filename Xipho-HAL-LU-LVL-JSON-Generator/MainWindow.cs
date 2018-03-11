@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +18,7 @@ namespace Xipho_HAL_LU_LVL_JSON_Generator {
 
         private void CreditsButton_Click(object sender, EventArgs e) {
             string[] contributorList = GithubAPI.getContributors();
-            string sContributorList = "Contributors:";
+            string sContributorList = "Contributors:\n-----------------";
             foreach (string s in contributorList) {
                 sContributorList += "\n"+s;
             }
@@ -25,6 +27,7 @@ namespace Xipho_HAL_LU_LVL_JSON_Generator {
 
         private void ToolStrip_OpenLUZ_Click(object sender, EventArgs e) {
             LUZOpenFileDialog.ShowDialog();
+            WorldLoader.LUZFile.Open(LUZOpenFileDialog.FileName);
         }
     }
 }

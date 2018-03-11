@@ -37,7 +37,25 @@ namespace Xipho_HAL_LU_LVL_JSON_Generator {
 
         public struct Coordinate {
             public Vector3 position;
-            public Vector3 rotation;
+            public Quaternion rotation;
+        }
+
+        public static class StringUtils {
+            public static string ReadString(ref BinaryReader br) {
+                string output = "";
+                for(int i = br.ReadByte(); i>0; --i) {
+                    output += br.ReadChar();
+                }
+                return output;
+            }
+            public static string ReadWString(ref BinaryReader br) {
+                string output = "";
+                for (int i = br.ReadByte(); i > 0; --i) {
+                    output += br.ReadChar();
+                    br.ReadChar();
+                }
+                return output;
+            }
         }
     }
 }
